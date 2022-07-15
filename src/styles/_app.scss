@@ -10,28 +10,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.card {
-  margin: 0 auto; /* Added */
-  float: none; /* Added */
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-  width: auto;
-}
-
-.card-body {
-  margin: 1.5rem;
-  display: inline-block;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .card-title {
-  font-size: 3rem;
-  text-align: center;
-  color: darkblue;
-  padding-bottom: 0.5rem;
-  font-family: bold;
-}
+    font-size: 3rem;
+    text-align: center;
+    color: darkblue;
+    padding-bottom: 0.5rem;
+    font-family: bold;
+  }
 
 .card-text {
   font-size: 1.2rem;
@@ -39,5 +24,12 @@ body {
 }
 
 p {
-  font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin: 1.5rem;
 }

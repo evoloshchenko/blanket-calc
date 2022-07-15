@@ -7,6 +7,11 @@ function App() {
     <div className="App">
       <BlanketSize />
     </div>
+    
+
+
+
+
   );
 }
 
