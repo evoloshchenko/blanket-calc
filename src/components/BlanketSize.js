@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const BlaketSize = () => {
+const BlanketSize = () => {
   return (
     <>
       <Card className="calc" style={{ width: "30rem" }}>
@@ -49,4 +49,4 @@ const BlaketSize = () => {
   );
 };
 
-export default BlaketSize;
+export default BlanketSize;
