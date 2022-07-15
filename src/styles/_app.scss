@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+}
+
+body {
+  background-color: lightblue;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  width: auto;
+}
+
+.card-body {
+  margin: 1.5rem;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-title {
+  font-size: 3rem;
+  text-align: center;
+  color: darkblue;
+  padding-bottom: 0.5rem;
+  font-family: bold;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
