@@ -13,6 +13,16 @@ import { useState } from "react";
 import blanketIMG from "../img/blanket1.jpg";
 //Import formulas for our calculating functions
 import { calculateBlanketRows, calculateBlanketStitches } from "../formulas";
+import {
+  initialStitches,
+  initialRows,
+  initialWidth,
+  initialLength,
+  initialBlanketWidth,
+  initialBlanketLength,
+  initialTotalRows,
+  iniatialTotalStitches,
+} from "../constants";
 
 const BlanketSize = () => {
   //State
@@ -60,9 +70,20 @@ const BlanketSize = () => {
   const calculate = (e) => {
     //Prevent submitting
     e.preventDefault();
-
     calcStitches();
     calcRows();
+  };
+
+  //Cleared button
+  const resetCalc = () => {
+    setStitches(initialStitches);
+    setRows(initialRows);
+    setWidth(initialWidth);
+    setLength(initialLength);
+    setDesiredLength(initialBlanketLength);
+    setDesiredWidth(initialBlanketWidth);
+    setTotalRows(initialTotalRows);
+    setTotalStitches(iniatialTotalStitches);
   };
 
   return (
@@ -88,7 +109,11 @@ const BlanketSize = () => {
               <div className="container">
                 <div className="row">
                   <div className="col-md-12 d-flex justify-content-end">
-                    <Button type="button" className="btn btn-secondary">
+                    <Button
+                      onClick={resetCalc}
+                      type="button"
+                      className="btn btn-secondary"
+                    >
                       Clear
                     </Button>
                   </div>
@@ -110,6 +135,7 @@ const BlanketSize = () => {
                   <Form.Control
                     type="number"
                     min="0"
+                    value={rows}
                     onChange={(e) => setRows(e.target.value)}
                     aria-label="rows"
                   />
@@ -131,6 +157,7 @@ const BlanketSize = () => {
                   <Form.Control
                     type="number"
                     min="0"
+                    value={length}
                     onChange={(e) => setLength(e.target.value)}
                     aria-label="Length"
                   />
@@ -153,6 +180,7 @@ const BlanketSize = () => {
                   <Form.Control
                     type="number"
                     min="0"
+                    value={desiredLength}
                     onChange={(e) => setDesiredLength(e.target.value)}
                     aria-label="d-length"
                   />
