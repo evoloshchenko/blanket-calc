@@ -1,3 +1,4 @@
+//Bootstrap
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -5,9 +6,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import BlanketSize from "../pages/BlanketSize";
+import BlanketSize from "./BlanketSize";
+//Animation
 import { fadeIn } from "../animations";
 import { motion } from "framer-motion";
+//Router
+import {} from "react-router-dom";
 
 function NavBar() {
   return (
@@ -16,7 +20,7 @@ function NavBar() {
         <motion.div variants={fadeIn} initial="hidden" animate="show">
           <Navbar key={expand} bg="light" expand={expand} className="mb-3">
             <Container fluid>
-              <Navbar.Brand className="logo" href="#">
+              <Navbar.Brand className="logo" href="/">
                 KnitStitch
               </Navbar.Brand>
               <Navbar.Toggle
@@ -34,11 +38,10 @@ function NavBar() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1">
-                      Home
-                    </Nav.Link>
-                    <Nav.Link href="#action2">Link</Nav.Link>
-                    <NavDropdown
+                    <Nav.Link href="/blanket">Blanket Calculator</Nav.Link>
+                    <Nav.Link href="/scarf">Scarf Calculator</Nav.Link>
+                    <Nav.Link href="/raglan">Raglan Calculator</Nav.Link>
+                    {/* <NavDropdown
                       title="Dropdown"
                       id={`offcanvasNavbarDropdown-expand-${expand}`}
                     >
@@ -52,7 +55,7 @@ function NavBar() {
                       <NavDropdown.Item href="#action5">
                         Something else here
                       </NavDropdown.Item>
-                    </NavDropdown>
+                    </NavDropdown> */}
                   </Nav>
                   <Form className="d-flex">
                     <Form.Control
@@ -61,7 +64,7 @@ function NavBar() {
                       className="me-2"
                       aria-label="Search"
                     />
-                    <Button variant="outline-success">Search</Button>
+                    <Button variant="outline-primary">Search</Button>
                   </Form>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>

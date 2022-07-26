@@ -1,4 +1,5 @@
 import { Card, Col, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function GridCards(props) {
   return (
@@ -12,14 +13,15 @@ function GridCards(props) {
               // data-src="holder.js/100px160"
             />
             <Card.Body>
-              <Card.Title className="title">Card Title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
+              <Card.Title className="title">{props.title}</Card.Title>
+              <Card.Text> {props.text}</Card.Text>
               <div className="text-center">
-                <Button variant="secondary">Go somewhere</Button>
+                {/* <Button href={props.link} variant="secondary">
+                  Calculate
+                </Button> */}
+                <Link to={props.link} className="btn btn-secondary">
+                  Calculate
+                </Link>
               </div>
             </Card.Body>
           </Card>
