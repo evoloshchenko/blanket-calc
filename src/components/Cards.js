@@ -9,6 +9,7 @@ import "../styles/_cards.scss";
 import blanketImg from "../img/blanket1.jpg";
 import raglanImg from "../img/raglan.jpg";
 import scarfImg from "../img/scarf.jpg";
+import socksImg from "../img/socks.jpg";
 
 //Added a text for calculators
 const BlanketText =
@@ -17,6 +18,8 @@ const ScarfText =
   "If you already choose the yarn, and even knit some swatches, you can easily calculate the size of desired scarf.";
 const RaglanText =
   "It will help you to understand how much stitches and rows you'll need for different parts of raglan sweater.";
+const SocksText =
+  "If for a long time you dreamt of perfect pair of knitting socks, so this calculator helps you to make it right.";
 
 function Cards() {
   return (
@@ -28,6 +31,14 @@ function Cards() {
             title="Blanket Calculator"
             text={BlanketText}
             link="/blanket"
+          />
+        </Col>
+        <Col className="col-md-4">
+          <GridCards
+            imgsrc={socksImg}
+            title="Socks Calculator"
+            text={SocksText}
+            link="/socks"
           />
         </Col>
         <Col className="col-md-4">

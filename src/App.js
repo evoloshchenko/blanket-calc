@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import BlanketPage from "./pages/BlanketPage";
 import ScarfPage from "./pages/ScarfPage";
 import RaglanPage from "./pages/RaglanPage";
+import SocksPage from "./pages/SocksPage";
 //Styles
 import "./styles/_app.scss";
 import NavBar from "./components/Nav";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/blanket" exact element={<BlanketPage />} />
         <Route path="/scarf" exact element={<ScarfPage />} />
         <Route path="/raglan" exact element={<RaglanPage />} />
+        <Route path="/socks" exact element={<SocksPage />} />
       </Routes>
     </div>
   );
