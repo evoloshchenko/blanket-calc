@@ -1,3 +1,5 @@
+//Here I have UI of SocksCard.
+
 import { useState } from "react";
 import {
   Card,
@@ -20,7 +22,7 @@ import {
   INITIAL_LENGTH,
 } from "../constants";
 
-const SocksCalc = () => {
+const SocksCard = () => {
   //State
   const [stitches, setStitches] = useState(INITIAL_STITCHES);
   const [rows, setRows] = useState(INITIAL_ROWS);
@@ -281,4 +283,4 @@ const SocksCalc = () => {
   );
 };
 
-export default SocksCalc;
+export default SocksCard;

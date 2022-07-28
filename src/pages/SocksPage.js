@@ -1,4 +1,4 @@
-import SocksCalc from "../components/SocksCalc";
+import SocksCalc from "../calculators/SocksCalc";
 
 const SocksPage = () => {
   return <SocksCalc />;
