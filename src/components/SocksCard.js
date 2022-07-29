@@ -1,5 +1,7 @@
 //Here I have UI of SocksCard.
 
+import "../styles/_socksCard.scss";
+
 import { useState } from "react";
 import {
   Card,
@@ -31,9 +33,9 @@ const SocksCard = () => {
   return (
     <div>
       <Container>
-        <Card>
-          <Row className="fill_data">
-            <Col>
+        <div className="socks-card p-3">
+          <Row className="fill-data">
+            <Col classname="img-component">
               <Card className="text-center">
                 <div className="overflow">
                   <Card.Img src={SocksIMG} alt="socks_image" />
@@ -46,7 +48,6 @@ const SocksCard = () => {
                 <Card.Text>
                   Fill some info to get a total socks calculation.{" "}
                   <span>
-                    {" "}
                     But first you should pick yarn and ornament, knit some gauge
                     - 10*10cm, and than measure your stitches and rows. If your
                     gauge bigger than standart one, you can use our poles, and
@@ -147,25 +148,23 @@ const SocksCard = () => {
                   <div className="text-center">
                     <Button className="calc">Calculate</Button>
                   </div>
-                  <div>
-                    <p>
-                      All calculations based on previously filled forms, and
-                      will appear below. We divide it for some parts of sock.
-                    </p>
-                  </div>
+                  <p>
+                    All calculations based on previously filled forms, and will
+                    appear below. We divide it for some parts of sock.
+                  </p>
                 </Form>
               </Card.Body>
             </Col>
           </Row>
-          <Row className="calculated_data">
+          <Row className="calculated-data">
             <Col>
               <div className="text-center">
                 <h4 className="font-weight-bold">The Cuff</h4>
-                <p>
-                  This form will show us the total number of stitches that we
-                  should cast on.
-                </p>
               </div>
+              <p>
+                This form will show us the total number of stitches that we
+                should cast on.
+              </p>
               <InputGroup className="mb-3">
                 <InputGroup.Text>Total Socks Stitches</InputGroup.Text>
                 <Form.Control
@@ -176,8 +175,10 @@ const SocksCard = () => {
               </InputGroup>
               <div className="text-center">
                 <h4 className="font-weight-bold">Heel Flap</h4>
-                <p>Here we can see the info for knitting perfect heel flap</p>
               </div>
+              <p className="text-left">
+                Here we can see the info for knitting perfect heel flap
+              </p>
               <InputGroup className="mb-3">
                 <InputGroup.Text>Heel Stitches</InputGroup.Text>
                 <Form.Control
@@ -206,9 +207,7 @@ const SocksCard = () => {
                   // value={totalStitches}
                 />
               </InputGroup>
-              <p className="text-center">
-                Number of stitches to pick up for sides of heel flap.
-              </p>
+              <p>Number of stitches to pick up for sides of heel flap.</p>
               <InputGroup className="mb-3">
                 <InputGroup.Text>Pick Heel Flap Stitches</InputGroup.Text>
                 <Form.Control
@@ -227,8 +226,8 @@ const SocksCard = () => {
             <Col>
               <div className="text-center">
                 <h4 className="font-weight-bold">Gusset</h4>
-                <p>Number of stitches to decrease extra gusset stitches.</p>
               </div>
+              <p>Number of stitches to decrease extra gusset stitches.</p>
               <InputGroup className="mb-3">
                 <InputGroup.Text>Decrease Gusset Stitches</InputGroup.Text>
                 <Form.Control
@@ -248,9 +247,7 @@ const SocksCard = () => {
                   // value={totalStitches}
                 />
               </InputGroup>
-              <p className="text-center">
-                How much stitches to decrease for making a toe.
-              </p>
+              <p>How much stitches to decrease for making a toe.</p>
               <InputGroup className="mb-3">
                 <InputGroup.Text>Decrease Toe Stitches</InputGroup.Text>
                 <Form.Control
@@ -277,7 +274,7 @@ const SocksCard = () => {
               </InputGroup>
             </Col>
           </Row>
-        </Card>
+        </div>
       </Container>
     </div>
   );
