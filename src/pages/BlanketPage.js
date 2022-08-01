@@ -1,7 +1,7 @@
-import BlanketSize from "../components/BlanketSize";
+import Calculator from "../calculators/blanket/Calculator"
 
 const BlanketPage = () => {
-  return <BlanketSize />;
+  return <Calculator />;
 };
 
 export default BlanketPage;

@@ -21,13 +21,12 @@ import {
   INITIAL_LENGTH,
   INITIAL_BLANKET_WIDTH,
   INITIAL_BLANKET_LENGTH,
-  INITIAL_TOTAL_ROWS,
-  INITIAL_TOTAL_STITCHES,
 } from "../constants";
 
 //Import animations
 import { popup, imageAnimation, whileHover } from "../animations";
 import { motion } from "framer-motion";
+import { NumberInput } from "./NumberInput";
 
 const BlanketSize = () => {
   //State
@@ -37,8 +36,8 @@ const BlanketSize = () => {
   const [length, setLength] = useState(INITIAL_LENGTH);
   const [desiredWidth, setDesiredWidth] = useState(INITIAL_BLANKET_WIDTH);
   const [desiredLength, setDesiredLength] = useState(INITIAL_BLANKET_LENGTH);
-  const [totalStitches, setTotalStitches] = useState(INITIAL_TOTAL_STITCHES);
-  const [totalRows, setTotalRows] = useState(INITIAL_TOTAL_ROWS);
+  const [totalStitches, setTotalStitches] = useState();
+  const [totalRows, setTotalRows] = useState();
 
   //Calc functions
   //Calculate Stitches
@@ -81,14 +80,14 @@ const BlanketSize = () => {
 
   //Cleared button
   const resetCalc = () => {
-    setStitches(INITIAL_STITCHES);
-    setRows(INITIAL_ROWS);
-    setWidth(INITIAL_WIDTH);
-    setLength(INITIAL_LENGTH);
-    setDesiredLength(INITIAL_BLANKET_LENGTH);
-    setDesiredWidth(INITIAL_BLANKET_WIDTH);
-    setTotalRows(INITIAL_TOTAL_ROWS);
-    setTotalStitches(INITIAL_TOTAL_STITCHES);
+    setStitches(0);
+    setRows(0);
+    setWidth(0);
+    setLength(0);
+    setDesiredLength(0);
+    setDesiredWidth(0);
+    setTotalRows("");
+    setTotalStitches("");
   };
 
   return (
@@ -97,7 +96,7 @@ const BlanketSize = () => {
         <Card>
           <Row>
             <Col>
-              <Card className="text-center">
+              <div className="text-center">
                 <div className="overflow">
                   <motion.img
                     variants={imageAnimation}
@@ -107,16 +106,15 @@ const BlanketSize = () => {
                     alt="blanket_image"
                   />
                 </div>
-              </Card>
+              </div>
             </Col>
             <Col>
               <Card.Body>
                 <Card.Title>
-                  {" "}
                   <h1>Blanket Size Calculator</h1>
                 </Card.Title>
                 <Card.Text>
-                  Fill some info to get a total blanket size.{" "}
+                  Fill some info to get a total blanket size.
                   <span>
                     But first, You should measure your knitted gauge in cm
                   </span>
@@ -136,25 +134,20 @@ const BlanketSize = () => {
                 </div>
                 <form>
                   <InputGroup className="mb-3">
-                    <InputGroup.Text className="stitches">
-                      Stitches
-                    </InputGroup.Text>
-                    <Form.Control
-                      type="number"
-                      min="0"
+                    <NumberInput
+                      label="Stitches"
+                      id="stitches"
                       value={stitches}
-                      onChange={(e) => setStitches(e.target.value)}
-                      aria-label="stitches"
+                      setValue={setStitches}
                     />
-                    <InputGroup.Text className="rows">Rows</InputGroup.Text>
-                    <Form.Control
-                      type="number"
-                      min="0"
+                    <NumberInput
+                      label="Rows"
+                      id="rows"
                       value={rows}
-                      onChange={(e) => setRows(e.target.value)}
-                      aria-label="rows"
+                      setValue={setRows}
                     />
                   </InputGroup>
+
                   <InputGroup className="mb-3">
                     <InputGroup.Text className="width">
                       Width (cm)
@@ -216,15 +209,15 @@ const BlanketSize = () => {
                     form.
                   </p>
                   <InputGroup className="mb-3">
-                    <InputGroup.Text>Total stitches / rows</InputGroup.Text>
-                    <Form.Control
+                    <NumberInput
+                      label="Total stitches"
+                      id="total-stitches"
                       disabled
-                      aria-label="total-stitches"
                       value={totalStitches}
                     />
-                    <Form.Control
+                    <NumberInput
+                      id="total-rows"
                       disabled
-                      aria-label="total-rows"
                       value={totalRows}
                     />
                   </InputGroup>
