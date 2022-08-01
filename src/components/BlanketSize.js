@@ -28,6 +28,7 @@ import {
 //Import animations
 import { popup, imageAnimation, whileHover } from "../animations";
 import { motion } from "framer-motion";
+import { NumberInput } from "./parts/form/NumberInput";
 
 const BlanketSize = () => {
   //State
@@ -112,11 +113,10 @@ const BlanketSize = () => {
             <Col>
               <Card.Body>
                 <Card.Title>
-                  {" "}
                   <h1>Blanket Size Calculator</h1>
                 </Card.Title>
                 <Card.Text>
-                  Fill some info to get a total blanket size.{" "}
+                  Fill some info to get a total blanket size.
                   <span>
                     But first, You should measure your knitted gauge in cm
                   </span>
@@ -136,25 +136,20 @@ const BlanketSize = () => {
                 </div>
                 <form>
                   <InputGroup className="mb-3">
-                    <InputGroup.Text className="stitches">
-                      Stitches
-                    </InputGroup.Text>
-                    <Form.Control
-                      type="number"
-                      min="0"
+                    <NumberInput
+                      label="Stitches"
+                      id="stitches"
                       value={stitches}
-                      onChange={(e) => setStitches(e.target.value)}
-                      aria-label="stitches"
+                      setValue={setStitches}
                     />
-                    <InputGroup.Text className="rows">Rows</InputGroup.Text>
-                    <Form.Control
-                      type="number"
-                      min="0"
+                    <NumberInput
+                      label="Rows"
+                      id="rows"
                       value={rows}
-                      onChange={(e) => setRows(e.target.value)}
-                      aria-label="rows"
+                      setValue={setRows}
                     />
                   </InputGroup>
+
                   <InputGroup className="mb-3">
                     <InputGroup.Text className="width">
                       Width (cm)
