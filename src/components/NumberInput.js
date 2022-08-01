@@ -1,16 +1,25 @@
 import { Form, InputGroup } from "react-bootstrap";
 
-export const NumberInput = ({ label, value, setValue, id }) => {
+export const NumberInput = ({
+  label,
+  value,
+  setValue,
+  id,
+  disabled = false,
+}) => {
   return (
     <>
-      <InputGroup.Text id={id}>{label}</InputGroup.Text>
+      {label && <InputGroup.Text id={id}>{label}</InputGroup.Text>}
       <Form.Control
         type="number"
-        min="3"
+        min="0"
         value={value}
+        disabled={disabled}
         onChange={(e) => setValue(e.target.value)}
         aria-describedby={id}
       />
     </>
   );
 };
+
+export default NumberInput;
