@@ -1,4 +1,3 @@
-import BlanketSize from "./components/BlanketSize";
 import GridCards from "./components/GridCards";
 import Cards from "./components/Cards";
 //Pages

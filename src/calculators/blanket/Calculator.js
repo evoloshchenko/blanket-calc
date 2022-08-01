@@ -90,7 +90,7 @@ const BlanketSize = () => {
         <Card>
           <Row>
             <Col>
-              <div className="text-center">
+              <div id="blanket-image" className="text-center">
                 <div className="overflow">
                   <motion.img
                     variants={imageAnimation}
