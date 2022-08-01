@@ -1,11 +1,9 @@
-export const INITIAL_STITCHES = 0;
-export const INITIAL_ROWS = 0;
-export const INITIAL_WIDTH = 0;
-export const INITIAL_LENGTH = 0;
-export const INITIAL_BLANKET_WIDTH = 0;
-export const INITIAL_BLANKET_LENGTH = 0;
-export const INITIAL_TOTAL_ROWS = 0;
-export const INITIAL_TOTAL_STITCHES = 0;
+export const INITIAL_STITCHES = 20;
+export const INITIAL_ROWS = 25;
+export const INITIAL_WIDTH = 10;
+export const INITIAL_LENGTH = 10;
+export const INITIAL_BLANKET_WIDTH = 60;
+export const INITIAL_BLANKET_LENGTH = 120;
 
 //Socks constants
 export const INITIAL_SIZE_FOOT = 0;
