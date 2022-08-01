@@ -1,7 +1,7 @@
-import SocksCalc from "../calculators/SocksCalc";
+import Calculator from "../calculators/socks/Calculator";
 
 const SocksPage = () => {
-  return <SocksCalc />;
+  return <Calculator />;
 };
 
 export default SocksPage;

@@ -2,7 +2,7 @@ import { InputGroup } from "react-bootstrap";
 
 import NumberInput from "../../components/NumberInput";
 
-const ResultForm = ({ totalStitches, totalRows }) => {
+const Results = ({ totalStitches, totalRows }) => {
   return (
     <>
       <p>The total stitches and rows needed will show below in the form.</p>
@@ -19,4 +19,4 @@ const ResultForm = ({ totalStitches, totalRows }) => {
   );
 };
 
-export default ResultForm;
+export default Results;

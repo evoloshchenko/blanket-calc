@@ -2,7 +2,7 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import blanketIMG from "../../img/blanket1.jpg";
-import ResultForm from "./ResultForm";
+import Results from "./Results";
 import InputForm from "./InputForm";
 //Import formulas for our calculating functions
 import { calculateBlanketRows, calculateBlanketStitches } from "../../formulas";
@@ -134,7 +134,7 @@ const BlanketSize = () => {
 
                   <CalculateButton calculate={calculate} />
 
-                  <ResultForm
+                  <Results
                     totalStitches={totalStitches}
                     totalRows={totalRows}
                   />
