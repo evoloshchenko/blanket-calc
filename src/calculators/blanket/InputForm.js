@@ -52,7 +52,8 @@ const InputForm = ({
           value={desiredWidth}
           setValue={setDesiredWidth}
         />
-
+      </InputGroup>
+      <InputGroup className="mb-3">
         <NumberInput
           label="Desired length (cm)"
           id="desired-length"

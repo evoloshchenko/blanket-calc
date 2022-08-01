@@ -13,7 +13,7 @@ const ResultForm = ({ totalStitches, totalRows }) => {
           disabled
           value={totalStitches}
         />
-        <NumberInput id="total-rows" disabled value={totalRows} />
+        <NumberInput id="total-rows" label="Total rows" disabled value={totalRows} />
       </InputGroup>
     </>
   );
