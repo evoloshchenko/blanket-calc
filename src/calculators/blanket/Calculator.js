@@ -4,6 +4,7 @@ import { useState } from "react";
 import blanketIMG from "../../img/blanket1.jpg";
 import Results from "./Results";
 import InputForm from "./InputForm";
+import ImageComponent from "../../components/ImageComponent";
 //Import formulas for our calculating functions
 import { calculateBlanketRows, calculateBlanketStitches } from "../../formulas";
 //Import constants
@@ -17,7 +18,7 @@ import {
 } from "../../constants";
 
 //Import animations
-import { popup, imageAnimation } from "../../animations";
+import { popup } from "../../animations";
 import { motion } from "framer-motion";
 import CalculateButton from "../../components/CalculateButton";
 import ResetButton from "../../components/ResetButton";
@@ -90,17 +91,11 @@ const BlanketSize = () => {
         <Card>
           <Row>
             <Col>
-              <div id="blanket-image" className="text-center">
-                <div className="overflow">
-                  <motion.img
-                    variants={imageAnimation}
-                    initial="hidden"
-                    animate="show"
-                    src={blanketIMG}
-                    alt="blanket_image"
-                  />
-                </div>
-              </div>
+              <ImageComponent
+                id="blanket-image"
+                image={blanketIMG}
+                alt="blanket-image"
+              />
             </Col>
             <Col>
               <Card.Body>

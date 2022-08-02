@@ -3,10 +3,16 @@ import InputForm from "./InputForm";
 import Results from "./Results";
 import CalculateButton from "../../components/CalculateButton";
 import ResetButton from "../../components/ResetButton";
+import ImageComponent from "../../components/ImageComponent";
+
+//Import Animation
+import { motion } from "framer-motion";
+import { imageAnimation } from "../../animations";
 
 //Import formulas
 import { calculateSocksStitches } from "../../formulas";
 
+//Styles
 import "../../styles/_socksCard.scss";
 
 import { useState } from "react";
@@ -112,12 +118,12 @@ const SocksCard = () => {
       <Container>
         <div className="socks-card p-3">
           <Row className="fill-data">
-            <Col classname="img-component">
-              <Card className="text-center">
-                <div className="overflow">
-                  <Card.Img src={SocksIMG} alt="socks_image" />
-                </div>
-              </Card>
+            <Col>
+              <ImageComponent
+                id="socks-image"
+                image={SocksIMG}
+                alt="socks-image"
+              />
             </Col>
             <Col>
               <Card.Body>
