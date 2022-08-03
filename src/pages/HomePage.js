@@ -26,7 +26,7 @@ const HomePage = () => {
             imageUrl={blanketImg}
             title="Blanket Calculator"
             text={BlanketText}
-            link="/blanket"
+            url="/blanket"
           />
         </Col>
         <Col>
@@ -34,7 +34,7 @@ const HomePage = () => {
             imageUrl={socksImg}
             title="Socks Calculator"
             text={SocksText}
-            link="/socks"
+            url="/socks"
           />
         </Col>
         <Col>
@@ -42,7 +42,7 @@ const HomePage = () => {
             imageUrl={scarfImg}
             title="Scarf Calculator"
             text={ScarfText}
-            link="/scarf"
+            url="/scarf"
           />
         </Col>
         <Col>
@@ -50,7 +50,7 @@ const HomePage = () => {
             imageUrl={raglanImg}
             title="Raglan Calculator"
             text={RaglanText}
-            link="/raglan"
+            url="/raglan"
           />
         </Col>
       </Row>

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { imageAnimation } from "../animations";
 
-const ImageComponent = (props) => {
+const DetailImage = (props) => {
   return (
     <div className="text-center">
       <div className="overflow">
@@ -19,4 +19,4 @@ const ImageComponent = (props) => {
   );
 };
 
-export default ImageComponent;
+export default DetailImage;

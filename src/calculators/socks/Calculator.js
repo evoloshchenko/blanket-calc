@@ -3,7 +3,7 @@ import InputForm from "./InputForm";
 import Results from "./Results";
 import CalculateButton from "../../components/CalculateButton";
 import ResetButton from "../../components/ResetButton";
-import ImageComponent from "../../components/ImageComponent";
+import DetailImage from "../../components/DetailImage";
 
 //Import Animation
 import { motion } from "framer-motion";
@@ -119,7 +119,7 @@ const SocksCard = () => {
         <div className="socks-card p-3">
           <Row className="fill-data">
             <Col>
-              <ImageComponent
+              <DetailImage
                 id="socks-image"
                 image={SocksIMG}
                 alt="socks-image"

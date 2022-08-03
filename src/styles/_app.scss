@@ -10,12 +10,17 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 .card-title {
   font-size: 2rem;
   text-align: center;
   color: darkblue;
-  padding-bottom: 0.5rem;
   font-family: bold;
+  margin: 0rem;
 }
 
 .card-text {

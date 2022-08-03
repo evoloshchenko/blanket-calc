@@ -4,7 +4,7 @@ import { useState } from "react";
 import blanketIMG from "../../img/blanket1.jpg";
 import Results from "./Results";
 import InputForm from "./InputForm";
-import ImageComponent from "../../components/ImageComponent";
+import DetailImage from "../../components/DetailImage";
 //Import formulas for our calculating functions
 import { calculateBlanketRows, calculateBlanketStitches } from "../../formulas";
 //Import constants
@@ -91,7 +91,7 @@ const BlanketSize = () => {
         <Card>
           <Row>
             <Col>
-              <ImageComponent
+              <DetailImage
                 id="blanket-image"
                 image={blanketIMG}
                 alt="blanket-image"

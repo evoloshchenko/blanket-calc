@@ -1,5 +1,3 @@
-import GridCards from "./components/GridCards";
-import Cards from "./components/Cards";
 //Pages
 import HomePage from "./pages/HomePage";
 import BlanketPage from "./pages/BlanketPage";
