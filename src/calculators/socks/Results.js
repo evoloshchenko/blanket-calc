@@ -43,12 +43,6 @@ const Results = ({
         </p>
         <InputGroup className="mb-3">
           <NumberInput
-            label="Heel Stitches"
-            id="heel-stitches"
-            disabled
-            value={heelStitches}
-          />
-          <NumberInput
             label="Gusset Stitches"
             id="gusset-stitches"
             disabled

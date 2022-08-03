@@ -10,7 +10,15 @@ import { motion } from "framer-motion";
 import { imageAnimation } from "../../animations";
 
 //Import formulas
-import { calculateSocksStitches } from "../../formulas";
+import {
+  calculateSocksStitches,
+  calculateGussetStitches,
+  calculateHeelFlapStitches,
+  calculateInstepStitches,
+  calculatePickHeelFlapStitches,
+} from "../../formulas";
+
+import { Sock } from "./models";
 
 //Styles
 import "../../styles/_socksCard.scss";
@@ -73,11 +81,24 @@ const SocksCard = () => {
       alert("Please enter your valid stitches and rows");
       return;
     }
-    //Calculate value
-    const total = calculateSocksStitches(stitches, footCircum);
-    console.log(total);
-    //Set State
-    setTotalSocksStitches(total);
+
+    const sock = new Sock(
+      stitches,
+      rows,
+      width,
+      length,
+      sizeFoot,
+      footCircum,
+      heelDiagonal,
+      calfCircum
+    );
+
+    setTotalSocksStitches(sock.stitches);
+    setGussetStitches(sock.gussetStitches);
+    setHeelFlapStitches(sock.heelFlapStitches);
+    setInstepStitches(sock.instepStitches);
+    setPickHeelFlapStitches(sock.pickHeelFlapStitches);
+    setHeelFlapLength(sock.heelFlapLength);
   };
 
   //The general function of calculation

@@ -47,14 +47,12 @@ const BlanketSize = () => {
 
     // Calculate value
     const total = calculateBlanketStitches(stitches, width, desiredWidth);
-    console.log(total);
 
     // Set state
     setTotalStitches(total);
   };
   //Calculate Rows
   const calcRows = () => {
-    console.log("calc rows");
 
     if (rows === 0 || length === 0) {
       alert("Please enter your valid stitches and rows");
