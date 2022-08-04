@@ -72,7 +72,7 @@ const Results = ({
             value={pickHeelFlapStitches}
           />
           <NumberInput
-            label="Heel Flap Length"
+            label="Heel Flap Length (cm)"
             id="heel-flap-length"
             disabled
             value={heelFlapLength}
