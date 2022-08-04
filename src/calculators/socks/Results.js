@@ -16,10 +16,11 @@ const Results = ({
   decreaseToeStitches,
   toeRows,
   toeLength,
+  toeStitches,
 }) => {
   return (
     <>
-      <Col>
+      <Col className="me-2">
         <div className="text-center">
           <h4 className="font-weight-bold">The Cuff</h4>
         </div>
@@ -38,7 +39,7 @@ const Results = ({
         <div className="text-center">
           <h4 className="font-weight-bold">Heel Flap</h4>
         </div>
-        <p className="text-left">
+        <p className="heel-flap">
           Here we can see the info for knitting perfect heel flap
         </p>
         <InputGroup className="mb-3">
@@ -49,7 +50,7 @@ const Results = ({
             value={gussetStitches}
           />
         </InputGroup>
-        <InputGroup className="mb-3">
+        <InputGroup className="mb-4">
           <NumberInput
             label="Heel Flap Stitches"
             id="heel-flap-stitches"
@@ -79,11 +80,14 @@ const Results = ({
           />
         </InputGroup>
       </Col>
-      <Col>
+      <Col className="ms-2">
         <div className="text-center">
           <h4 className="font-weight-bold">Gusset</h4>
         </div>
-        <p>Number of stitches to decrease extra gusset stitches.</p>
+        <p>
+          This form will show us the number of stitches to decrease extra gusset
+          stitches.
+        </p>
         <InputGroup className="mb-3">
           <NumberInput
             label="Decrease Gusset Stitches"
@@ -97,7 +101,7 @@ const Results = ({
         </div>
         <InputGroup className="mb-3">
           <NumberInput
-            label="Socks Length"
+            label="Socks Length (rows)"
             id="socks-length"
             disabled
             value={socksLength}
@@ -111,6 +115,12 @@ const Results = ({
             disabled
             value={decreaseToeStitches}
           />
+          <NumberInput
+            label="Remain Toe Stitches"
+            id="toe-stitches"
+            disabled
+            value={toeStitches}
+          />
         </InputGroup>
         <InputGroup className="mb-3">
           <NumberInput
@@ -122,7 +132,7 @@ const Results = ({
         </InputGroup>
         <InputGroup className="mb-3">
           <NumberInput
-            label="Toe Length"
+            label="Toe Length (cm)"
             id="toe-length"
             disabled
             value={toeLength}

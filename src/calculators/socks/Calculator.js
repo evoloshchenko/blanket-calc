@@ -72,6 +72,7 @@ const SocksCard = () => {
   const [decreaseGussetStitches, setDecreaseGussetStitches] = useState();
   const [socksLength, setSocksLength] = useState();
   const [decreaseToeStitches, setDecreaseToeStitches] = useState();
+  const [toeStitches, setToeStitches] = useState();
   const [toeRows, setToeRows] = useState();
   const [toeLength, setToeLength] = useState();
 
@@ -99,6 +100,12 @@ const SocksCard = () => {
     setInstepStitches(sock.instepStitches);
     setPickHeelFlapStitches(sock.pickHeelFlapStitches);
     setHeelFlapLength(sock.heelFlapLength);
+    setDecreaseGussetStitches(sock.decreaseGussetStitches);
+    setSocksLength(sock.socksLength);
+    setDecreaseToeStitches(sock.decreaseToeStitches);
+    setToeStitches(sock.toeStitches);
+    setToeRows(sock.toeRows);
+    setToeLength(sock.toeLength);
   };
 
   //The general function of calculation
@@ -137,16 +144,16 @@ const SocksCard = () => {
   return (
     <div>
       <Container>
-        <div className="socks-card p-3">
+        <div className="socks-card p-4 pt-2">
           <Row className="fill-data">
-            <Col>
+            <Col className="me-2">
               <DetailImage
                 id="socks-image"
                 image={SocksIMG}
                 alt="socks-image"
               />
             </Col>
-            <Col>
+            <Col className="ms-2">
               <Card.Body>
                 <Card.Title>Cuff-Down Socks Calculator</Card.Title>
                 <Card.Text>
@@ -202,6 +209,7 @@ const SocksCard = () => {
               decreaseGussetStitches={decreaseGussetStitches}
               socksLength={socksLength}
               decreaseToeStitches={decreaseToeStitches}
+              toeStitches={toeStitches}
               toeRows={toeRows}
               toeLength={toeLength}
             />

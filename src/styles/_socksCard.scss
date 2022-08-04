@@ -14,6 +14,9 @@ p {
   margin: 0;
 }
 
+.heel-flap{
+  padding-top: 0.7rem;
+}
 .col {
   padding: 0rem 1.1rem;
   padding-bottom: 0rem;
@@ -23,14 +26,11 @@ p {
   width: auto;
 }
 
-.card-img {
-  padding: 0;
-}
-
 #socks-image {
-  margin: 0.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  max-height: 600px;
+  margin: 0rem;
+  margin-top: 1rem;
   padding: 0rem;
   border-radius: 7px;
 }

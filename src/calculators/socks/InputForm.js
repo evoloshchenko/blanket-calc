@@ -46,7 +46,7 @@ const InputForm = ({
       </InputGroup>
       <InputGroup className="mb-3">
         <NumberInput
-          label="Size Foot (EU)"
+          label="Size Foot (cm)"
           id="size-foot"
           value={sizeFoot}
           setValue={setSizeFoot}
