@@ -56,4 +56,28 @@ export class Sock {
   get heelFlapLength() {
     return Math.ceil(this.pickHeelFlapStitches / this.gaugeStitches);
   }
+
+  get decreaseGussetStitches() {
+    return Math.ceil(this.gussetStitches - this.stitches);
+  }
+
+  get socksLength() {
+    return Math.ceil(this.footSize * this.gaugeRows);
+  }
+
+  get decreaseToeStitches() {
+    return Math.ceil(this.stitches - 16);
+  }
+
+  get toeStitches() {
+    return Math.ceil(this.stitches - this.decreaseToeStitches);
+  }
+
+  get toeRows() {
+    return Math.ceil(this.decreaseToeStitches / 2);
+  }
+
+  get toeLength() {
+    return Math.ceil(this.toeRowsNumber / this.gaugeRows);
+  }
 }
