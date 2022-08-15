@@ -1,0 +1,14 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the project.
+    cmds:
+      - npm run build
+
+  deploy:
+    desc: Deploy the project to S3 bucket.
+    cmds:
+      - aws s3 cp build s3://{{.S3_BUCKET_NAME}} --recursive --acl public-read
+    vars:
+      S3_BUCKET_NAME: knitting-calculator

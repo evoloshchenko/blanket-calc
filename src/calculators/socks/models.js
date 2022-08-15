@@ -78,6 +78,6 @@ export class Sock {
   }
 
   get toeLength() {
-    return Math.ceil(this.toeRowsNumber / this.gaugeRows);
+    return Math.ceil(this.toeRows / this.gaugeRows);
   }
 }
