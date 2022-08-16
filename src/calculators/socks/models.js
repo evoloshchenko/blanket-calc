@@ -9,8 +9,8 @@ export class Sock {
     heelDiagonal,
     calfCircum
   ) {
-    this.gaugeStitches = gaugeStitches;
-    this.gaugeRows = gaugeRows;
+    this.gaugeStitches = gaugeStitches / gaugeWidth;
+    this.gaugeRows = gaugeRows / gaugeLength;
     this.gaugeWidth = gaugeWidth;
     this.gaugeLength = gaugeLength;
     this.footSize = footSize;
