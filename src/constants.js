@@ -1,7 +1,9 @@
+//General constants
 export const INITIAL_STITCHES = 20;
 export const INITIAL_ROWS = 25;
 export const INITIAL_WIDTH = 10;
 export const INITIAL_LENGTH = 10;
+//Blanket constants
 export const INITIAL_BLANKET_WIDTH = 60;
 export const INITIAL_BLANKET_LENGTH = 120;
 
@@ -14,3 +16,7 @@ export const INITIAL_SIZE_FOOT = 25.5;
 export const INITIAL_FOOT_CIRCUM = 23;
 export const INITIAL_HEEL_DIAGONAL = 30;
 export const INITIAL_CALF_CIRCUM = 34;
+
+//Scarf constants
+export const INITIAL_SCARF_WIDTH = 40;
+export const INITIAL_SCARF_LENGTH = 180;

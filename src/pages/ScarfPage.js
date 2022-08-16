@@ -1,5 +1,7 @@
+import Calculator from "../calculators/scarf/Calculator";
+
 const ScarfPage = () => {
-  return <div>Scarf Page</div>;
+  return <Calculator />;
 };
 
 export default ScarfPage;
